@@ -34,7 +34,7 @@ Config.customcolors = {
     'BeepNBoop': 'Wrades'
 };
 /*** Begin automatically generated configuration ***/
-Config.version = "0.11.2 (3b2179f3/55fadf43)";
+Config.version = "0.11.2 (8f4ef347)";
 
 Config.routes = {
 	root: 'neodrafttest.herokuapp.com',
@@ -42,6 +42,5 @@ Config.routes = {
 	dex: 'dex.pokemonshowdown.com',
 	replays: 'replay.pokemonshowdown.com',
 	users: 'pokemonshowdown.com/users',
-	psmain: 'pokemonshowdown.com',
 };
 /*** End automatically generated configuration ***/
