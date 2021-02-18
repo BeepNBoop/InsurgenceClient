@@ -218,7 +218,7 @@ function toId() {
 		getActionPHP: function () {
 			var ret = '/~~neodrafttest.herokuapp.com:80/action.php';
 			if (Config.testclient) {
-				ret = 'https://' + Config.routes.client + ret;
+				ret = 'https://play.pokemonshowdown.com/~~showdown/action.php';
 			}
 			return (this.getActionPHP = function () {
 				return ret;
