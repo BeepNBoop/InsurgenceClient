@@ -182,15 +182,15 @@ const Dex = new class implements ModdedDex {
 	resourcePrefix = (() => {
 		let prefix = '';
 		if (window.document?.location?.protocol !== 'http:') prefix = 'https:';
-		return `${prefix}//${window.Config ? Config.routes.client : 'neodraft.herokuapp.com'}/https://raw.githubusercontent.com/BeepNBoop/pokemonshowdownimages/master/`;
+		return `${prefix}//${window.Config ? Config.routes.client : 'neodraft.herokuapp.com/https://raw.githubusercontent.com/BeepNBoop/pokemonshowdownimages/master'}/`;
 	})();
 
 	fxPrefix = (() => {
 		if (window.document?.location?.protocol === 'file:') {
-			if (window.Replays) return `https://${window.Config ? Config.routes.client : 'neodraft.herokuapp.com'}https://raw.githubusercontent.com/BeepNBoop/pokemonshowdownimages/master/fx/`;
+			if (window.Replays) return `https://${window.Config ? Config.routes.client : 'neodraft.herokuapp.com/https://raw.githubusercontent.com/BeepNBoop/pokemonshowdownimages/master/fx/'}`;
 			return `https://raw.githubusercontent.com/BeepNBoop/pokemonshowdownimages/master/fx/`;
 		}
-		return `//${window.Config ? Config.routes.client : 'neodraft.herokuapp.com'}https://raw.githubusercontent.com/BeepNBoop/pokemonshowdownimages/master/fx/`;
+		return `//${window.Config ? Config.routes.client : 'neodraft.herokuapp.com/https://raw.githubusercontent.com/BeepNBoop/pokemonshowdownimages/master/'}fx/`;
 	})();
 
 	loadedSpriteData = {xy: 1, bw: 0};

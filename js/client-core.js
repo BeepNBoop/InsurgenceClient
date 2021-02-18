@@ -82,7 +82,7 @@ log:function(){}};
 
 
 
-var PSURL="https://raw.githubusercontent.com/BeepNBoop/pokemonshowdownimages/master/";var
+var PSURL=(document.location.protocol!=='http:'?'https:':'')+"//"+'neodraft.herokuapp.com/https://raw.githubusercontent.com/BeepNBoop/pokemonshowdownimages/master'+"/";var
 
 PSSubscription=function(){
 
