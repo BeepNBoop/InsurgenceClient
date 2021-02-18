@@ -179,19 +179,9 @@ statNamesExceptHP=['atk','def','spa','spd','spe'];this.
 
 pokeballs=null;this.
 
-resourcePrefix=function(){var _window$document,_window$document$loca;
-var prefix='';
-if(((_window$document=window.document)==null?void 0:(_window$document$loca=_window$document.location)==null?void 0:_window$document$loca.protocol)!=='http:')prefix='https:';
-return prefix+"//"+(window.Config?Config.routes.client:'neodraft.herokuapp.com/https://raw.githubusercontent.com/BeepNBoop/pokemonshowdownimages/master')+"/";
-}();this.
+resourcePrefix="https://raw.githubusercontent.com/BeepNBoop/pokemonshowdownimages/master/";this.
 
-fxPrefix=function(){var _window$document2,_window$document2$loc;
-if(((_window$document2=window.document)==null?void 0:(_window$document2$loc=_window$document2.location)==null?void 0:_window$document2$loc.protocol)==='file:'){
-if(window.Replays)return"https://"+(window.Config?Config.routes.client:'neodraft.herokuapp.com/https://raw.githubusercontent.com/BeepNBoop/pokemonshowdownimages/master/fx/');
-return"https://raw.githubusercontent.com/BeepNBoop/pokemonshowdownimages/master/fx/";
-}
-return"//"+(window.Config?Config.routes.client:'neodraft.herokuapp.com/https://raw.githubusercontent.com/BeepNBoop/pokemonshowdownimages/master/')+"fx/";
-}();this.
+fxPrefix="https://raw.githubusercontent.com/BeepNBoop/pokemonshowdownimages/master/fx/";this.
 
 loadedSpriteData={xy:1,bw:0};this.
 moddedDexes={};}var _proto2=_temp.prototype;_proto2.

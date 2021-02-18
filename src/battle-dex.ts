@@ -179,19 +179,9 @@ const Dex = new class implements ModdedDex {
 
 	pokeballs: string[] | null = null;
 
-	resourcePrefix = (() => {
-		let prefix = '';
-		if (window.document?.location?.protocol !== 'http:') prefix = 'https:';
-		return `${prefix}//${window.Config ? Config.routes.client : 'neodraft.herokuapp.com/https://raw.githubusercontent.com/BeepNBoop/pokemonshowdownimages/master'}/`;
-	})();
+	resourcePrefix = "https://raw.githubusercontent.com/BeepNBoop/pokemonshowdownimages/master/";
 
-	fxPrefix = (() => {
-		if (window.document?.location?.protocol === 'file:') {
-			if (window.Replays) return `https://${window.Config ? Config.routes.client : 'neodraft.herokuapp.com/https://raw.githubusercontent.com/BeepNBoop/pokemonshowdownimages/master/fx/'}`;
-			return `https://raw.githubusercontent.com/BeepNBoop/pokemonshowdownimages/master/fx/`;
-		}
-		return `//${window.Config ? Config.routes.client : 'neodraft.herokuapp.com/https://raw.githubusercontent.com/BeepNBoop/pokemonshowdownimages/master/'}fx/`;
-	})();
+	fxPrefix = "https://raw.githubusercontent.com/BeepNBoop/pokemonshowdownimages/master/fx/";
 
 	loadedSpriteData = {xy: 1, bw: 0};
 	moddedDexes: {[mod: string]: ModdedDex} = {};
