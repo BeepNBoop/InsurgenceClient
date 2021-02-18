@@ -31,7 +31,7 @@ Config.roomsFirstOpenScript = function () {
 
 Config.customcolors = {
 	'zarel': 'aeo',
-    'BeepNBoop': 'Shadow Akumo'
+    'BeepNBoop': 'Wrades'
 };
 /*** Begin automatically generated configuration ***/
 Config.version = "0.11.2 (3b2179f3/55fadf43)";
