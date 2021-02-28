@@ -31,10 +31,10 @@ Config.roomsFirstOpenScript = function () {
 
 Config.customcolors = {
 	'zarel': 'aeo',
-    'BeepNBoop': 'Wrades'
+    'BeepNBoop': 'Bleh'
 };
 /*** Begin automatically generated configuration ***/
-Config.version = "0.11.2 (f27868a4)";
+Config.version = "0.11.2 (ca460b6e)";
 
 Config.routes = {
 	root: 'neodrafttest.herokuapp.com',
