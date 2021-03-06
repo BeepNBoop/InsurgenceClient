@@ -1012,7 +1012,7 @@ exports.BattlePokemonSpritesBW = {
 	sawsbuckwinter:{num:586},
 	emolga:{num:587},
 	emolgadelta:{num:587},
-	emolgadeltadeltablaze:{num:587},
+	emolgadeltablaze:{num:587},
 	karrablast:{num:588},
 	karrablastdelta:{num:588},
 	escavalier:{num:589},
