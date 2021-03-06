@@ -548,7 +548,7 @@ exports.BattlePokemonSprites = {
 	aron:{num:304},
 	arondelta:{num:304},
 	lairon:{num:305},
-	arondelta:{num:305},
+	lairondelta:{num:305},
 	aggron:{num:306},
 	aggronmega:{num:306},
 	aggrondelta:{num:306},
