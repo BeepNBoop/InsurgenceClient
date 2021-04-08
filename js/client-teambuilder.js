@@ -1949,6 +1949,7 @@
 				case 'Sawsbuck':
 				case 'Shellos':
 				case 'Sinistea':
+				case 'Snorlax':
 				case 'Vivillon':
 					break;
 				default:
