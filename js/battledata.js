@@ -2201,7 +2201,8 @@ breederf:'pokemonbreederf',
 1002:'#1002',
 1003:'#1003',
 1005:'#1005',
-1010:'#1010'};var
+1010:'#1010',
+1011:'darkraicultist-zoro'};var
 
 
 
