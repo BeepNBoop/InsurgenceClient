@@ -1211,6 +1211,7 @@ const BattleAvatarNumbers: {[k: string]: string} = {
 	1003: '#1003',
 	1005: '#1005',
 	1010: '#1010',
+	1011: 'darkraicultist-zoro',
 };
 
 type StatName = 'hp' | 'atk' | 'def' | 'spa' | 'spd' | 'spe';
