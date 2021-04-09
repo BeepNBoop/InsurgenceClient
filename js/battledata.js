@@ -2188,6 +2188,12 @@ var BattleAvatarNumbers={
 292:'bellelba',
 293:'benga',
 294:'ash',
+295:'darkraicultist-zoro',
+296:'anastasia',
+297:'calreath',
+298:'eduard',
+299:'london',
+300:'yuki',
 '#bw2elesa':'elesa-gen5bw2',
 '#teamrocket':'teamrocket',
 '#yellow':'yellow',
@@ -2201,8 +2207,7 @@ breederf:'pokemonbreederf',
 1002:'#1002',
 1003:'#1003',
 1005:'#1005',
-1010:'#1010',
-1011:'darkraicultist-zoro'};var
+1010:'#1010'};var
 
 
 
