@@ -3025,25 +3025,25 @@ var BattleBackdropsFive=[
 'bg-route.png'];
 
 var BattleBackdrops=[
-'bg-aquacordetown.jpg',
 'bg-beach.jpg',
-'bg-city.jpg',
-'bg-dampcave.jpg',
-'bg-darkbeach.jpg',
+'bg-dream.jpg',
 'bg-darkcity.jpg',
-'bg-darkmeadow.jpg',
 'bg-deepsea.jpg',
 'bg-desert.jpg',
 'bg-earthycave.jpg',
 'bg-elite4drake.jpg',
 'bg-forest.jpg',
-'bg-icecave.jpg',
-'bg-leaderwallace.jpg',
+'bg-indoors.jpg',
+'bg-jaern.jpg',
+'bg-lab.jpg',
 'bg-library.jpg',
 'bg-meadow.jpg',
-'bg-orasdesert.jpg',
-'bg-orassea.jpg',
-'bg-skypillar.jpg'];
+'bg-mountain.jpg',
+'bf-snow.jpg',
+'bg-volcano.jpg',
+'bg-darkvolcano.jpg',
+'bg-underwater.jpg',
+'bg-path.jpg'];
 
 
 var BattleOtherAnims={
