@@ -3025,31 +3025,25 @@ const BattleBackdropsFive = [
 	'bg-route.png',
 ];
 const BattleBackdrops = [
-	'bg-aquacordetown.jpg',
 	'bg-beach.jpg',
-	'bg-city.jpg',
-	'bg-dampcave.jpg',
 	'bg-dream.jpg',
 	'bg-darkcity.jpg',
-	'bg-darkmeadow.jpg',
 	'bg-deepsea.jpg',
 	'bg-desert.jpg',
 	'bg-earthycave.jpg',
 	'bg-elite4drake.jpg',
 	'bg-forest.jpg',
-	'bg-icecave.jpg',
 	'bg-indoors.jpg',
 	'bg-jaern.jpg',
-	'bg-leaderwallace.jpg',
+	'bg-lab.jpg',
 	'bg-library.jpg',
 	'bg-meadow.jpg',
 	'bg-mountain.jpg',
 	'bf-snow.jpg',
 	'bg-volcano.jpg',
 	'bg-darkvolcano.jpg',
-	'bg-orasdesert.jpg',
 	'bg-underwater.jpg',
-	'bg-skypillar.jpg',
+	'bg-path.jpg',
 ];
 
 const BattleOtherAnims: AnimTable = {
