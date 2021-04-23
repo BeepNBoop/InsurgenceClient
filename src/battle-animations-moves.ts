@@ -630,6 +630,9 @@ const BattleMoveAnims: AnimTable = {
 	hail: {
 		anim: BattleOtherAnims.dance.anim,
 	},
+	newmoon: {
+		anim: BattleOtherAnims.dance.anim,
+	},
 	sandstorm: {
 		anim: BattleOtherAnims.dance.anim,
 	},
