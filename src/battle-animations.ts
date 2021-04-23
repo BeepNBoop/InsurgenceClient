@@ -2403,7 +2403,9 @@ class PokemonSprite extends Sprite {
 				BattleOtherAnims.schoolingout.anim(scene, [this]);
 			} else if (speciesid === 'mimikyubusted' || speciesid === 'mimikyubustedtotem') {
 				// standard animation
-			} else {
+			} else if (speciesid === 'zoroarkmega') {
+				this.animReset();
+			}else {
 				BattleOtherAnims.megaevo.anim(scene, [this]);
 				doCry = true;
 			}
@@ -2771,6 +2773,10 @@ const BattleEffects: {[k: string]: SpriteData} = {
 	lightning: {
 		url: 'lightning.png', // by Pokemon Showdown user SailorCosmos
 		w: 41, h: 229,
+	},
+	livewire: {
+		url: 'livewire.png', // by Pokemon Showdown user SailorCosmos
+		w: 22, h: 61,
 	},
 	rocks: {
 		url: 'rocks.png', // Pokemon Online - Gilad
@@ -3869,6 +3875,80 @@ const BattleOtherAnims: AnimTable = {
 			}, 'linear', 'fade');
 		},
 	},
+	retrograde: {
+		anim(scene, [defender]) {
+			scene.showEffect('electroball', {
+				x: defender.x - 60,
+				y: defender.y + 40,
+				z: defender.z,
+				scale: 0.7,
+				opacity: 0.7,
+				time: 0,
+			}, {
+				x: defender.x,
+				y: defender.y,
+				scale: 0.2,
+				opacity: 0.2,
+				time: 300,
+			}, 'linear', 'fade');
+			scene.showEffect('electroball', {
+				x: defender.x + 60,
+				y: defender.y - 5,
+				z: defender.z,
+				scale: 0.7,
+				opacity: 0.7,
+				time: 100,
+			}, {
+				x: defender.x,
+				y: defender.y,
+				scale: 0.2,
+				opacity: 0.2,
+				time: 300,
+			}, 'linear', 'fade');
+			scene.showEffect('electroball', {
+				x: defender.x - 30,
+				y: defender.y + 60,
+				z: defender.z,
+				scale: 0.7,
+				opacity: 0.7,
+				time: 100,
+			}, {
+				x: defender.x,
+				y: defender.y,
+				scale: 0.2,
+				opacity: 0.2,
+				time: 400,
+			}, 'linear', 'fade');
+			scene.showEffect('electroball', {
+				x: defender.x + 20,
+				y: defender.y - 50,
+				z: defender.z,
+				scale: 0.7,
+				opacity: 0.7,
+				time: 100,
+			}, {
+				x: defender.x,
+				y: defender.y,
+				scale: 0.2,
+				opacity: 0.2,
+				time: 400,
+			}, 'linear', 'fade');
+			scene.showEffect('electroball', {
+				x: defender.x - 70,
+				y: defender.y - 50,
+				z: defender.z,
+				scale: 0.7,
+				opacity: 0.7,
+				time: 200,
+			}, {
+				x: defender.x,
+				y: defender.y,
+				scale: 0.2,
+				opacity: 0.2,
+				time: 500,
+			}, 'linear', 'fade');
+		},
+	},
 	heal: {
 		anim(scene, [attacker]) {
 			scene.showEffect('iceball', {
@@ -4241,6 +4321,51 @@ const BattleOtherAnims: AnimTable = {
 				opacity: 0.6,
 			}, 'decel', 'explode');
 			scene.showEffect('waterwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.4,
+				opacity: 0.3,
+				time: 150,
+			}, {
+				x: defender.x,
+				y: defender.y + 5,
+				z: defender.behind(30),
+				scale: 1,
+				opacity: 0.6,
+			}, 'decel', 'explode');
+		},
+	},
+	dragonshot: {
+		anim(scene, [attacker, defender]) {
+			scene.showEffect('poisonwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.4,
+				opacity: 0.3,
+			}, {
+				x: defender.x + 10,
+				y: defender.y + 5,
+				z: defender.behind(30),
+				scale: 1,
+				opacity: 0.6,
+			}, 'decel', 'explode');
+			scene.showEffect('poisonwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.4,
+				opacity: 0.3,
+				time: 75,
+			}, {
+				x: defender.x - 10,
+				y: defender.y - 5,
+				z: defender.behind(30),
+				scale: 1,
+				opacity: 0.6,
+			}, 'decel', 'explode');
+			scene.showEffect('poisonwisp', {
 				x: attacker.x,
 				y: attacker.y,
 				z: attacker.z,
