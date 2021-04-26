@@ -1251,6 +1251,58 @@ class BattleScene {
 				tspikeArray.push(tspike2);
 			}
 			break;
+		case 'livewire':
+			let wireArray = this.sideConditions[siden]['livewire'];
+			if (!wireArray) {
+				wireArray = [];
+				this.sideConditions[siden]['livewire'] = wireArray;
+			}
+			let wirelevels = this.battle.sides[siden].sideConditions['livewire'][1];
+			if (wireArray.length < 1 && wirelevels >= 1) {
+				const spike1 = new Sprite(BattleEffects.caltrop, {
+					display: 'block',
+					x: side.x - 25,
+					y: side.y - 40,
+					z: side.z,
+					scale: 0.3,
+				}, this);
+				this.$spritesFront[spriteIndex].append(spike1.$el!);
+				wireArray.push(spike1);
+			}
+			if (wireArray.length < 2 && wirelevels >= 2) {
+				const spike2 = new Sprite(BattleEffects.caltrop, {
+					display: 'block',
+					x: side.x + 30,
+					y: side.y - 45,
+					z: side.z,
+					scale: .3,
+				}, this);
+				this.$spritesFront[spriteIndex].append(spike2.$el!);
+				wireArray.push(spike2);
+			}
+			if (wireArray.length < 3 && wirelevels >= 3) {
+				const spike3 = new Sprite(BattleEffects.caltrop, {
+					display: 'block',
+					x: side.x + 50,
+					y: side.y - 40,
+					z: side.z,
+					scale: .3,
+				}, this);
+				this.$spritesFront[spriteIndex].append(spike3.$el!);
+				wireArray.push(spike3);
+			}
+			if (wireArray.length < 4 && wirelevels >= 4) {
+				const spike3 = new Sprite(BattleEffects.caltrop, {
+					display: 'block',
+					x: side.x + 50,
+					y: side.y - 40,
+					z: side.z,
+					scale: .3,
+				}, this);
+				this.$spritesFront[spriteIndex].append(spike3.$el!);
+				wireArray.push(spike3);
+			}
+			break;
 		case 'stickyweb':
 			const web = new Sprite(BattleEffects.web, {
 				display: 'block',
