@@ -9843,24 +9843,6 @@ y:attacker.y+60,
 opacity:0,
 time:1600},
 'linear');
-
-attacker.anim({
-x:defender.x,
-y:defender.y,
-z:defender.behind(-5),
-time:300},
-'accel');
-attacker.anim({
-time:500},
-'ballistic2Back');
-defender.delay(280);
-defender.anim({
-z:defender.behind(15),
-time:200},
-'decel');
-defender.anim({
-time:300},
-'decel');
 }},
 
 burnup:{
@@ -20825,7 +20807,7 @@ var xstep=(defender.x-attacker.x)/5;
 var ystep=(defender.x-200-attacker.x)/5;
 var zstep=(defender.z-attacker.z)/5;
 
-scene.backgroundEffect("url('https://"+Config.routes.client+"/fx/weather-sandstorm.png')",900,0.5);
+scene.backgroundEffect("url('https://"+Config.routes.client+"/fx/weather-newmoon.png')",900,0.5);
 
 for(var i=0;i<5;i++){
 scene.showEffect('blackwisp',{

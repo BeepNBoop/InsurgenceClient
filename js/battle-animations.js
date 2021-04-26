@@ -1251,6 +1251,69 @@ this.$spritesFront[spriteIndex].append(tspike2.$el);
 tspikeArray.push(tspike2);
 }
 break;
+case'livewire':
+var wireArray=this.sideConditions[siden]['livewire'];
+if(!wireArray){
+wireArray=[];
+this.sideConditions[siden]['livewire']=wireArray;
+}
+var wirelevels=this.battle.sides[siden].sideConditions['livewire'][1];
+if(wireArray.length<1&&wirelevels>=1){
+var _spike=new Sprite(BattleEffects.livewire,{
+display:'block',
+x:side.x-25,
+y:side.y-40,
+z:side.z,
+scale:0.3},
+this);
+this.$spritesFront[spriteIndex].append(_spike.$el);
+wireArray.push(_spike);
+}
+if(wireArray.length<2&&wirelevels>=2){
+var _spike2=new Sprite(BattleEffects.livewire,{
+display:'block',
+x:side.x+30,
+y:side.y-45,
+z:side.z,
+scale:.3},
+this);
+this.$spritesFront[spriteIndex].append(_spike2.$el);
+wireArray.push(_spike2);
+}
+if(wireArray.length<3&&wirelevels>=3){
+var _spike3=new Sprite(BattleEffects.livewire,{
+display:'block',
+x:side.x+50,
+y:side.y-40,
+z:side.z,
+scale:.3},
+this);
+this.$spritesFront[spriteIndex].append(_spike3.$el);
+wireArray.push(_spike3);
+}
+if(wireArray.length<4&&wirelevels>=4){
+var _spike4=new Sprite(BattleEffects.livewire,{
+display:'block',
+x:side.x+50,
+y:side.y-40,
+z:side.z,
+scale:.3},
+this);
+this.$spritesFront[spriteIndex].append(_spike4.$el);
+wireArray.push(_spike4);
+}
+if(wireArray.length<5&&wirelevels>=5){
+var _spike5=new Sprite(BattleEffects.livewire,{
+display:'block',
+x:side.x+50,
+y:side.y-40,
+z:side.z,
+scale:.3},
+this);
+this.$spritesFront[spriteIndex].append(_spike5.$el);
+wireArray.push(_spike5);
+}
+break;
 case'stickyweb':
 var web=new Sprite(BattleEffects.web,{
 display:'block',

@@ -34,7 +34,7 @@ Config.customcolors = {
     'BeepNBoop': 'Bleh'
 };
 /*** Begin automatically generated configuration ***/
-Config.version = "0.11.2 (79148821)";
+Config.version = "0.11.2 (301fe49b)";
 
 Config.routes = {
 	root: 'neodrafttest.herokuapp.com',

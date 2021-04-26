@@ -406,7 +406,7 @@ exports.BattlePokemonSpritesBW = {
 	gligar:{num:207},
 	steelix:{num:208},
 	steelixmega:{num:208},
-	steelixmega:{num:208},
+	steelixmegafire:{num:208},
 	snubbull:{num:209},
 	granbull:{num:210},
 	qwilfish:{num:211},
