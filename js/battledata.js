@@ -652,6 +652,10 @@ spriteData.y+=-22;
 spriteData.w*=1.5;
 spriteData.h*=1.5;
 spriteData.y+=-11;
+}else if(species.formeid==='-delta'){
+spriteData.w*=1;
+spriteData.h*=1;
+spriteData.y+=+16;
 }
 
 return spriteData;

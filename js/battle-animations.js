@@ -2902,7 +2902,11 @@ w:41,h:229},
 
 livewire:{
 url:'livewire.png',
-w:22,h:61},
+w:45,h:45},
+
+livewire2:{
+url:'livewire2.png',
+w:45,h:45},
 
 rocks:{
 url:'rocks.png',
