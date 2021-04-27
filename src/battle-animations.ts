@@ -1315,14 +1315,14 @@ class BattleScene {
 			}
 			break;
 		case 'permafrost':
-			let frostArray = this.sideConditions[siden]['livewire'];
+			let frostArray = this.sideConditions[siden]['icicle'];
 			if (!frostArray) {
 				frostArray = [];
-				this.sideConditions[siden]['livewire'] = frostArray;
+				this.sideConditions[siden]['icicle'] = frostArray;
 			}
-			let frostlevels = this.battle.sides[siden].sideConditions['livewire'][1];
+			let frostlevels = this.battle.sides[siden].sideConditions['icicle'][1];
 			if (frostArray.length < 1 && frostlevels >= 1) {
-				const frost1 = new Sprite(BattleEffects.livewire, {
+				const frost1 = new Sprite(BattleEffects.icicle, {
 					display: 'block',
 					x: side.x - 25,
 					y: side.y - 40,
@@ -1333,7 +1333,7 @@ class BattleScene {
 				frostArray.push(frost1);
 			}
 			if (frostArray.length < 2 && frostlevels >= 2) {
-				const frost2 = new Sprite(BattleEffects.livewire2, {
+				const frost2 = new Sprite(BattleEffects.icicle, {
 					display: 'block',
 					x: side.x + 30,
 					y: side.y - 45,
@@ -1344,7 +1344,7 @@ class BattleScene {
 				frostArray.push(frost2);
 			}
 			if (frostArray.length < 3 && frostlevels >= 3) {
-				const frost3 = new Sprite(BattleEffects.livewire2, {
+				const frost3 = new Sprite(BattleEffects.icicle, {
 					display: 'block',
 					x: side.x + 50,
 					y: side.y - 40,
@@ -1355,7 +1355,7 @@ class BattleScene {
 				frostArray.push(frost3);
 			}
 			if (frostArray.length < 4 && frostlevels >= 4) {
-				const frost4 = new Sprite(BattleEffects.livewire, {
+				const frost4 = new Sprite(BattleEffects.icicle, {
 					display: 'block',
 					x: side.x + 43,
 					y: side.y - 42,
@@ -1366,7 +1366,7 @@ class BattleScene {
 				frostArray.push(frost4);
 			}
 			if (frostArray.length < 5 && frostlevels >= 5) {
-				const frost5 = new Sprite(BattleEffects.livewire, {
+				const frost5 = new Sprite(BattleEffects.icicle, {
 					display: 'block',
 					x: side.x + 48,
 					y: side.y - 50,
