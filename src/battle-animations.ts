@@ -1314,6 +1314,69 @@ class BattleScene {
 				wireArray.push(wire5);
 			}
 			break;
+		case 'permafrost':
+			let frostArray = this.sideConditions[siden]['livewire'];
+			if (!frostArray) {
+				frostArray = [];
+				this.sideConditions[siden]['livewire'] = frostArray;
+			}
+			let frostlevels = this.battle.sides[siden].sideConditions['livewire'][1];
+			if (frostArray.length < 1 && frostlevels >= 1) {
+				const frost1 = new Sprite(BattleEffects.livewire, {
+					display: 'block',
+					x: side.x - 25,
+					y: side.y - 40,
+					z: side.z,
+					scale: 0.3,
+				}, this);
+				this.$spritesFront[spriteIndex].append(frost1.$el!);
+				frostArray.push(frost1);
+			}
+			if (frostArray.length < 2 && frostlevels >= 2) {
+				const frost2 = new Sprite(BattleEffects.livewire2, {
+					display: 'block',
+					x: side.x + 30,
+					y: side.y - 45,
+					z: side.z,
+					scale: .3,
+				}, this);
+				this.$spritesFront[spriteIndex].append(frost2.$el!);
+				frostArray.push(frost2);
+			}
+			if (frostArray.length < 3 && frostlevels >= 3) {
+				const frost3 = new Sprite(BattleEffects.livewire2, {
+					display: 'block',
+					x: side.x + 50,
+					y: side.y - 40,
+					z: side.z,
+					scale: .3,
+				}, this);
+				this.$spritesFront[spriteIndex].append(frost3.$el!);
+				frostArray.push(frost3);
+			}
+			if (frostArray.length < 4 && frostlevels >= 4) {
+				const frost4 = new Sprite(BattleEffects.livewire, {
+					display: 'block',
+					x: side.x + 43,
+					y: side.y - 42,
+					z: side.z,
+					scale: .3,
+				}, this);
+				this.$spritesFront[spriteIndex].append(frost4.$el!);
+				frostArray.push(frost4);
+			}
+			if (frostArray.length < 5 && frostlevels >= 5) {
+				const frost5 = new Sprite(BattleEffects.livewire, {
+					display: 'block',
+					x: side.x + 48,
+					y: side.y - 50,
+					z: side.z,
+					scale: .3,
+				}, this);
+				this.$spritesFront[spriteIndex].append(frost5.$el!);
+				frostArray.push(frost5);
+			}
+			break;
 		case 'stickyweb':
 			const web = new Sprite(BattleEffects.web, {
 				display: 'block',
