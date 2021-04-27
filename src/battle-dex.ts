@@ -655,7 +655,7 @@ const Dex = new class implements ModdedDex {
 		} else if (species.formeid === '-delta') {
 			spriteData.w *= 1;
 			spriteData.h *= 1;
-			spriteData.y += +16;
+			spriteData.y += -16;
 		}
 
 		return spriteData;
