@@ -1259,59 +1259,122 @@ this.sideConditions[siden]['livewire']=wireArray;
 }
 var wirelevels=this.battle.sides[siden].sideConditions['livewire'][1];
 if(wireArray.length<1&&wirelevels>=1){
-var _spike=new Sprite(BattleEffects.livewire,{
+var wire1=new Sprite(BattleEffects.livewire,{
 display:'block',
 x:side.x-25,
 y:side.y-40,
 z:side.z,
 scale:0.3},
 this);
-this.$spritesFront[spriteIndex].append(_spike.$el);
-wireArray.push(_spike);
+this.$spritesFront[spriteIndex].append(wire1.$el);
+wireArray.push(wire1);
 }
 if(wireArray.length<2&&wirelevels>=2){
-var _spike2=new Sprite(BattleEffects.livewire,{
+var wire2=new Sprite(BattleEffects.livewire2,{
 display:'block',
 x:side.x+30,
 y:side.y-45,
 z:side.z,
 scale:.3},
 this);
-this.$spritesFront[spriteIndex].append(_spike2.$el);
-wireArray.push(_spike2);
+this.$spritesFront[spriteIndex].append(wire2.$el);
+wireArray.push(wire2);
 }
 if(wireArray.length<3&&wirelevels>=3){
-var _spike3=new Sprite(BattleEffects.livewire,{
+var wire3=new Sprite(BattleEffects.livewire2,{
 display:'block',
 x:side.x+50,
 y:side.y-40,
 z:side.z,
 scale:.3},
 this);
-this.$spritesFront[spriteIndex].append(_spike3.$el);
-wireArray.push(_spike3);
+this.$spritesFront[spriteIndex].append(wire3.$el);
+wireArray.push(wire3);
 }
 if(wireArray.length<4&&wirelevels>=4){
-var _spike4=new Sprite(BattleEffects.livewire,{
+var wire4=new Sprite(BattleEffects.livewire,{
 display:'block',
-x:side.x+50,
-y:side.y-40,
+x:side.x+43,
+y:side.y-42,
 z:side.z,
 scale:.3},
 this);
-this.$spritesFront[spriteIndex].append(_spike4.$el);
-wireArray.push(_spike4);
+this.$spritesFront[spriteIndex].append(wire4.$el);
+wireArray.push(wire4);
 }
 if(wireArray.length<5&&wirelevels>=5){
-var _spike5=new Sprite(BattleEffects.livewire,{
+var wire5=new Sprite(BattleEffects.livewire,{
+display:'block',
+x:side.x+48,
+y:side.y-50,
+z:side.z,
+scale:.3},
+this);
+this.$spritesFront[spriteIndex].append(wire5.$el);
+wireArray.push(wire5);
+}
+break;
+case'permafrost':
+var frostArray=this.sideConditions[siden]['icicle'];
+if(!frostArray){
+frostArray=[];
+this.sideConditions[siden]['icicle']=frostArray;
+}
+var frostlevels=this.battle.sides[siden].sideConditions['icicle'][1];
+if(frostArray.length<1&&frostlevels>=1){
+var frost1=new Sprite(BattleEffects.icicle,{
+display:'block',
+x:side.x-25,
+y:side.y-40,
+z:side.z,
+scale:0.3},
+this);
+this.$spritesFront[spriteIndex].append(frost1.$el);
+frostArray.push(frost1);
+}
+if(frostArray.length<2&&frostlevels>=2){
+var frost2=new Sprite(BattleEffects.icicle,{
+display:'block',
+x:side.x+30,
+y:side.y-45,
+z:side.z,
+scale:.3},
+this);
+this.$spritesFront[spriteIndex].append(frost2.$el);
+frostArray.push(frost2);
+}
+if(frostArray.length<3&&frostlevels>=3){
+var frost3=new Sprite(BattleEffects.icicle,{
 display:'block',
 x:side.x+50,
 y:side.y-40,
 z:side.z,
 scale:.3},
 this);
-this.$spritesFront[spriteIndex].append(_spike5.$el);
-wireArray.push(_spike5);
+this.$spritesFront[spriteIndex].append(frost3.$el);
+frostArray.push(frost3);
+}
+if(frostArray.length<4&&frostlevels>=4){
+var frost4=new Sprite(BattleEffects.icicle,{
+display:'block',
+x:side.x+43,
+y:side.y-42,
+z:side.z,
+scale:.3},
+this);
+this.$spritesFront[spriteIndex].append(frost4.$el);
+frostArray.push(frost4);
+}
+if(frostArray.length<5&&frostlevels>=5){
+var frost5=new Sprite(BattleEffects.icicle,{
+display:'block',
+x:side.x+48,
+y:side.y-50,
+z:side.z,
+scale:.3},
+this);
+this.$spritesFront[spriteIndex].append(frost5.$el);
+frostArray.push(frost5);
 }
 break;
 case'stickyweb':
@@ -2467,7 +2530,7 @@ BattleOtherAnims.schoolingout.anim(scene,[this]);
 }else if(speciesid==='mimikyubusted'||speciesid==='mimikyubustedtotem'){
 
 }else if(speciesid==='zoroarkmega'){
-this.animReset();
+BattleOtherAnims.silentmega.anim(scene,[this]);
 }else{
 BattleOtherAnims.megaevo.anim(scene,[this]);
 doCry=true;
@@ -3095,24 +3158,36 @@ var BattleBackdropsFive=[
 
 var BattleBackdrops=[
 'bg-beach.jpg',
-'bg-dream.jpg',
+'bg-beachshore.jpg',
+'bg-city.jpg',
+'bg-dampcave.jpg',
 'bg-darkcity.jpg',
+'bg-darkvolcano.jpg',
 'bg-deepsea.jpg',
+'bg-deepseacave.jpg',
 'bg-desert.jpg',
+'bg-deserthills.jpg',
+'bg-dream.jpg',
 'bg-earthycave.jpg',
 'bg-elite4drake.jpg',
+'bg-farmmeadow.jpg',
 'bg-forest.jpg',
+'bg-icecave.jpg',
 'bg-indoors.jpg',
 'bg-jaern.jpg',
 'bg-lab.jpg',
 'bg-library.jpg',
 'bg-meadow.jpg',
 'bg-mountain.jpg',
-'bf-snow.jpg',
-'bg-volcano.jpg',
-'bg-darkvolcano.jpg',
+'bg-mountainpath.jpg',
+'bg-path.jpg',
+'bg-river.jpg',
+'bg-snow.jpg',
+'bg-thunderplains.jpg',
 'bg-underwater.jpg',
-'bg-path.jpg'];
+'bg-volcano.jpg',
+'bg-volcanocave.jpg',
+'bg-windypath.jpg'];
 
 
 var BattleOtherAnims={
@@ -5327,8 +5402,11 @@ time:600},
 'decel');
 }},
 
+silentmega:{
+anim:function(scene,_ref45){var attacker=_ref45[0];}},
+
 megaevo:{
-anim:function(scene,_ref45){var attacker=_ref45[0];
+anim:function(scene,_ref46){var attacker=_ref46[0];
 scene.backgroundEffect('#835BA5',500,0.6);
 scene.showEffect('iceball',{
 x:attacker.x,
@@ -5381,7 +5459,7 @@ time:600},
 }},
 
 zpower:{
-anim:function(scene,_ref46){var attacker=_ref46[0];
+anim:function(scene,_ref47){var attacker=_ref47[0];
 scene.backgroundEffect('linear-gradient(#000000 20%, #0000DD)',1800,0.4);
 scene.showEffect('electroball',{
 x:attacker.x-60,
@@ -5504,7 +5582,7 @@ time:1600},
 }},
 
 powerconstruct:{
-anim:function(scene,_ref47){var attacker=_ref47[0];
+anim:function(scene,_ref48){var attacker=_ref48[0];
 var xf=[1,-1,1,-1];
 var yf=[1,-1,-1,1];
 var xf2=[1,0,-1,0];
@@ -5631,7 +5709,7 @@ time:500},
 }},
 
 ultraburst:{
-anim:function(scene,_ref48){var attacker=_ref48[0];
+anim:function(scene,_ref49){var attacker=_ref49[0];
 scene.backgroundEffect('#000000',600,0.5);
 scene.backgroundEffect('#ffffff',500,1,550);
 scene.showEffect('wisp',{
@@ -5822,7 +5900,7 @@ time:1000},
 
 var BattleStatusAnims={
 brn:{
-anim:function(scene,_ref49){var attacker=_ref49[0];
+anim:function(scene,_ref50){var attacker=_ref50[0];
 scene.showEffect('fireball',{
 x:attacker.x-20,
 y:attacker.y-15,
@@ -5840,7 +5918,7 @@ time:300},
 }},
 
 psn:{
-anim:function(scene,_ref50){var attacker=_ref50[0];
+anim:function(scene,_ref51){var attacker=_ref51[0];
 scene.showEffect('poisonwisp',{
 x:attacker.x+30,
 y:attacker.y-40,
@@ -5883,7 +5961,7 @@ time:500},
 }},
 
 slp:{
-anim:function(scene,_ref51){var attacker=_ref51[0];
+anim:function(scene,_ref52){var attacker=_ref52[0];
 scene.showEffect('wisp',{
 x:attacker.x,
 y:attacker.y+20,
@@ -5916,7 +5994,7 @@ time:600},
 }},
 
 par:{
-anim:function(scene,_ref52){var attacker=_ref52[0];
+anim:function(scene,_ref53){var attacker=_ref53[0];
 scene.showEffect('electroball',{
 x:attacker.x,
 y:attacker.y,
@@ -5956,7 +6034,7 @@ time:100},
 }},
 
 frz:{
-anim:function(scene,_ref53){var attacker=_ref53[0];
+anim:function(scene,_ref54){var attacker=_ref54[0];
 scene.showEffect('icicle',{
 x:attacker.x-30,
 y:attacker.y,
@@ -6007,7 +6085,7 @@ time:600},
 }},
 
 flinch:{
-anim:function(scene,_ref54){var attacker=_ref54[0];
+anim:function(scene,_ref55){var attacker=_ref55[0];
 scene.showEffect('shadowball',{
 x:attacker.x,
 y:attacker.y,
@@ -6022,7 +6100,7 @@ time:300},
 }},
 
 attracted:{
-anim:function(scene,_ref55){var attacker=_ref55[0];
+anim:function(scene,_ref56){var attacker=_ref56[0];
 scene.showEffect('heart',{
 x:attacker.x+20,
 y:attacker.y+20,
@@ -6062,7 +6140,7 @@ time:500},
 }},
 
 cursed:{
-anim:function(scene,_ref56){var attacker=_ref56[0];
+anim:function(scene,_ref57){var attacker=_ref57[0];
 scene.backgroundEffect('#000000',700,0.2);
 attacker.delay(300);
 attacker.anim({x:attacker.x-5,time:50});
@@ -6085,7 +6163,7 @@ time:600},
 }},
 
 confused:{
-anim:function(scene,_ref57){var attacker=_ref57[0];
+anim:function(scene,_ref58){var attacker=_ref58[0];
 scene.showEffect('electroball',{
 x:attacker.x+50,
 y:attacker.y+30,
@@ -6141,7 +6219,7 @@ time:800},
 }},
 
 confusedselfhit:{
-anim:function(scene,_ref58){var attacker=_ref58[0];
+anim:function(scene,_ref59){var attacker=_ref59[0];
 scene.showEffect('wisp',{
 x:attacker.x,
 y:attacker.y,
