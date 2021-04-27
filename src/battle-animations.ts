@@ -1259,59 +1259,59 @@ class BattleScene {
 			}
 			let wirelevels = this.battle.sides[siden].sideConditions['livewire'][1];
 			if (wireArray.length < 1 && wirelevels >= 1) {
-				const spike1 = new Sprite(BattleEffects.livewire, {
+				const wire1 = new Sprite(BattleEffects.livewire, {
 					display: 'block',
 					x: side.x - 25,
 					y: side.y - 40,
 					z: side.z,
 					scale: 0.3,
 				}, this);
-				this.$spritesFront[spriteIndex].append(spike1.$el!);
-				wireArray.push(spike1);
+				this.$spritesFront[spriteIndex].append(wire1.$el!);
+				wireArray.push(wire1);
 			}
 			if (wireArray.length < 2 && wirelevels >= 2) {
-				const spike2 = new Sprite(BattleEffects.livewire, {
+				const wire2 = new Sprite(BattleEffects.livewire2, {
 					display: 'block',
 					x: side.x + 30,
 					y: side.y - 45,
 					z: side.z,
 					scale: .3,
 				}, this);
-				this.$spritesFront[spriteIndex].append(spike2.$el!);
-				wireArray.push(spike2);
+				this.$spritesFront[spriteIndex].append(wire2.$el!);
+				wireArray.push(wire2);
 			}
 			if (wireArray.length < 3 && wirelevels >= 3) {
-				const spike3 = new Sprite(BattleEffects.livewire, {
+				const wire3 = new Sprite(BattleEffects.livewire2, {
 					display: 'block',
 					x: side.x + 50,
 					y: side.y - 40,
 					z: side.z,
 					scale: .3,
 				}, this);
-				this.$spritesFront[spriteIndex].append(spike3.$el!);
-				wireArray.push(spike3);
+				this.$spritesFront[spriteIndex].append(wire3.$el!);
+				wireArray.push(wire3);
 			}
 			if (wireArray.length < 4 && wirelevels >= 4) {
-				const spike3 = new Sprite(BattleEffects.livewire, {
+				const wire4 = new Sprite(BattleEffects.livewire, {
 					display: 'block',
-					x: side.x + 50,
-					y: side.y - 40,
+					x: side.x + 43,
+					y: side.y - 42,
 					z: side.z,
 					scale: .3,
 				}, this);
-				this.$spritesFront[spriteIndex].append(spike3.$el!);
-				wireArray.push(spike3);
+				this.$spritesFront[spriteIndex].append(wire4.$el!);
+				wireArray.push(wire4);
 			}
 			if (wireArray.length < 5 && wirelevels >= 5) {
-				const spike3 = new Sprite(BattleEffects.livewire, {
+				const wire5 = new Sprite(BattleEffects.livewire, {
 					display: 'block',
-					x: side.x + 50,
-					y: side.y - 40,
+					x: side.x + 48,
+					y: side.y - 50,
 					z: side.z,
 					scale: .3,
 				}, this);
-				this.$spritesFront[spriteIndex].append(spike3.$el!);
-				wireArray.push(spike3);
+				this.$spritesFront[spriteIndex].append(wire5.$el!);
+				wireArray.push(wire5);
 			}
 			break;
 		case 'stickyweb':
@@ -2467,7 +2467,7 @@ class PokemonSprite extends Sprite {
 			} else if (speciesid === 'mimikyubusted' || speciesid === 'mimikyubustedtotem') {
 				// standard animation
 			} else if (speciesid === 'zoroarkmega') {
-				this.animReset();
+				BattleOtherAnims.silentmega.anim(scene, [this]);
 			}else {
 				BattleOtherAnims.megaevo.anim(scene, [this]);
 				doCry = true;
@@ -2838,7 +2838,7 @@ const BattleEffects: {[k: string]: SpriteData} = {
 		w: 41, h: 229,
 	},
 	livewire: {
-		url: 'livewire.png', // by Pokemon Showdown user SailorCosmos
+		url: 'livewire.png',
 		w: 22, h: 61,
 	},
 	rocks: {
@@ -3095,24 +3095,36 @@ const BattleBackdropsFive = [
 ];
 const BattleBackdrops = [
 	'bg-beach.jpg',
-	'bg-dream.jpg',
+	'bg-beachshore.jpg',
+	'bg-city.jpg',
+	'bg-dampcave.jpg',
 	'bg-darkcity.jpg',
+	'bg-darkvolcano.jpg',
 	'bg-deepsea.jpg',
+	'bg-deepseacave.jpg',
 	'bg-desert.jpg',
+	'bg-deserthills.jpg',
+	'bg-dream.jpg',
 	'bg-earthycave.jpg',
 	'bg-elite4drake.jpg',
+	'bg-farmmeadow.jpg',
 	'bg-forest.jpg',
+	'bg-icecave.jpg',
 	'bg-indoors.jpg',
 	'bg-jaern.jpg',
 	'bg-lab.jpg',
 	'bg-library.jpg',
 	'bg-meadow.jpg',
 	'bg-mountain.jpg',
-	'bf-snow.jpg',
-	'bg-volcano.jpg',
-	'bg-darkvolcano.jpg',
-	'bg-underwater.jpg',
+	'bg-mountainpath.jpg',
 	'bg-path.jpg',
+	'bg-river.jpg',
+	'bg-snow.jpg',
+	'bg-thunderplains.jpg',
+	'bg-underwater.jpg',
+	'bg-volcano.jpg',
+	'bg-volcanocave.jpg',
+	'bg-windypath.jpg',
 ];
 
 const BattleOtherAnims: AnimTable = {
@@ -5326,6 +5338,9 @@ const BattleOtherAnims: AnimTable = {
 				time: 600,
 			}, 'decel');
 		},
+	},
+	silentmega: {
+		anim(scene, [attacker]) {}
 	},
 	megaevo: {
 		anim(scene, [attacker]) {
