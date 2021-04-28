@@ -653,7 +653,7 @@ spriteData.w*=1.5;
 spriteData.h*=1.5;
 spriteData.y+=-11;
 }else if(species.formeid==='-delta'&&!spriteData.isFrontSprite&&(
-species.id!=='weezingdelta'||species.id!=='volcaronadeltaarmored'||
+species.baseSpecies!=='weezing'||species.id!=='volcaronadeltaarmored'||
 species.id!=='vespiquendelta'||species.id!=='torterradelta'||
 species.id!=='snorlaxdelta'||species.id!=='shiftrydelta'||
 species.id!=='serperiordelta'||species.id!=='roseradedelta'||
@@ -683,8 +683,7 @@ species.id!=='avaluggdelta'||species.id!=='aurorusdelta'||
 species.id!=='arondelta'||species.id!=='arcaninedelta'||
 species.id!=='amoongussdelta'||species.id!=='ambipomdelta'||
 species.id!=='amauradelta'||species.id!=='aipomdelta'||
-species.id!=='aggrondelta'||options.shiny))
-{
+species.id!=='aggrondelta'||options.shiny)){
 spriteData.w*=1;
 spriteData.h*=1;
 spriteData.y+=-16;
