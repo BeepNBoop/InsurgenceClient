@@ -283,6 +283,19 @@ exports.BattleTextAFD = {
 		upkeep: "  The hail is crashing down.",
 		damage: "  [POKEMON] is buffeted by the hail!",
 	},
+	sleet: {
+		weatherName: "Sleet",
+		start: "  It started to hail!",
+		end: "  The hail died down.",
+		upkeep: "  The hail is crashing down.",
+		damage: "  [POKEMON] is buffeted by the hail!",
+	},
+	newmoon: {
+		weatherName: "New Moon",
+		start: "  The sky darkened!",
+		end: "  The darkness faded.",
+		upkeep: "  The sky is dark.",
+	},
 	desolateland: {
 		weatherName: "Intense Sun",
 		start: "  The sunlight turned extremely harsh!",
