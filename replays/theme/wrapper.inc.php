@@ -24,12 +24,12 @@ function ThemeHeaderTemplate() {
 <?php } ?>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE8" />
-	<link rel="stylesheet" href="//neodraft.herokuapp.com/style/font-awesome.css?0.12116036119105966" />
-	<link rel="stylesheet" href="//neodrafttest.herokuapp.com/theme/panels.css?0.9510412574629219" />
-	<link rel="stylesheet" href="//neodrafttest.herokuapp.com/theme/main.css?0.32600256755492585" />
-	<link rel="stylesheet" href="//neodraft.herokuapp.com/style/battle.css?0.4963152255172949" />
-	<link rel="stylesheet" href="//neodraft.herokuapp.com/style/replay.css?0.16534245301148265" />
-	<link rel="stylesheet" href="//neodraft.herokuapp.com/style/utilichart.css?0.3771575939903007" />
+	<link rel="stylesheet" href="//neodraft.herokuapp.com/style/font-awesome.css?0.029931236172198616" />
+	<link rel="stylesheet" href="//neodrafttest.herokuapp.com/theme/panels.css?0.6048218150982265" />
+	<link rel="stylesheet" href="//neodrafttest.herokuapp.com/theme/main.css?0.317575907423602" />
+	<link rel="stylesheet" href="//neodraft.herokuapp.com/style/battle.css?0.5662990041921658" />
+	<link rel="stylesheet" href="//neodraft.herokuapp.com/style/replay.css?0.13123451181429902" />
+	<link rel="stylesheet" href="//neodraft.herokuapp.com/style/utilichart.css?0.7204493326415491" />
 
 	<!-- Workarounds for IE bugs to display trees correctly. -->
 	<!--[if lte IE 6]><style> li.tree { height: 1px; } </style><![endif]-->
@@ -53,11 +53,11 @@ function ThemeHeaderTemplate() {
 	<div class="pfx-topbar">
 		<div class="header">
 			<ul class="nav">
-				<li><a class="button nav-first<?php if ($panels->tab === 'home') echo ' cur'; ?>" href="//neodrafttest.herokuapp.com/?0.4902947206816568"><img src="//neodrafttest.herokuapp.com/images/pokemonshowdownbeta.png?0.695407710519488" alt="Pok&eacute;mon Showdown! (beta)" /> Home</a></li>
-				<li><a class="button<?php if ($panels->tab === 'pokedex') echo ' cur'; ?>" href="//dex.pokemonshowdown.com/?0.953928617616872">Pok&eacute;dex</a></li>
-				<li><a class="button<?php if ($panels->tab === 'replay') echo ' cur'; ?>" href="/?0.9610485659030943">Replays</a></li>
-				<li><a class="button<?php if ($panels->tab === 'ladder') echo ' cur'; ?>" href="//neodrafttest.herokuapp.com/ladder/?0.8755950788419393">Ladder</a></li>
-				<li><a class="button nav-last" href="//neodrafttest.herokuapp.com/forums/?0.9494809979525787">Forum</a></li>
+				<li><a class="button nav-first<?php if ($panels->tab === 'home') echo ' cur'; ?>" href="//neodrafttest.herokuapp.com/?0.9333866196792251"><img src="//neodrafttest.herokuapp.com/images/pokemonshowdownbeta.png?0.3865198141137389" alt="Pok&eacute;mon Showdown! (beta)" /> Home</a></li>
+				<li><a class="button<?php if ($panels->tab === 'pokedex') echo ' cur'; ?>" href="//dex.pokemonshowdown.com/?0.38046847907888015">Pok&eacute;dex</a></li>
+				<li><a class="button<?php if ($panels->tab === 'replay') echo ' cur'; ?>" href="/?0.48683649264744555">Replays</a></li>
+				<li><a class="button<?php if ($panels->tab === 'ladder') echo ' cur'; ?>" href="//neodrafttest.herokuapp.com/ladder/?0.06763983359252101">Ladder</a></li>
+				<li><a class="button nav-last" href="//neodrafttest.herokuapp.com/forums/?0.21779267219424026">Forum</a></li>
 			</ul>
 			<ul class="nav nav-play">
 				<li><a class="button greenbutton nav-first nav-last" href="http://play.pokemonshowdown.com/">Play</a></li>
@@ -74,10 +74,10 @@ function ThemeHeaderTemplate() {
 
 function ThemeScriptsTemplate() {
 ?>
-	<script src="//neodraft.herokuapp.com/js/lib/jquery-1.11.0.min.js?0.8105827405624955"></script>
-	<script src="//neodraft.herokuapp.com/js/lib/lodash.core.js?0.6367796210408101"></script>
-	<script src="//neodraft.herokuapp.com/js/lib/backbone.js?0.5746691225141451"></script>
-	<script src="//dex.pokemonshowdown.com/js/panels.js?0.07902385487351626"></script>
+	<script src="//neodraft.herokuapp.com/js/lib/jquery-1.11.0.min.js?0.25757603690915065"></script>
+	<script src="//neodraft.herokuapp.com/js/lib/lodash.core.js?0.2623443850770364"></script>
+	<script src="//neodraft.herokuapp.com/js/lib/backbone.js?0.9081215758981644"></script>
+	<script src="//dex.pokemonshowdown.com/js/panels.js?0.8460914435754658"></script>
 <?php
 }
 
@@ -86,21 +86,21 @@ function ThemeFooterTemplate() {
 ?>
 <?php $panels->scripts(); ?>
 
-	<script src="//neodraft.herokuapp.com/js/lib/jquery-cookie.js?0.9659902380882013"></script>
-	<script src="//neodraft.herokuapp.com/js/lib/html-sanitizer-minified.js?0.8484201702588858"></script>
-	<script src="//neodraft.herokuapp.com/js/battle-sound.js?0.9776249920187481"></script>
-	<script src="//neodraft.herokuapp.com/config/config.js?0.5829532995336222"></script>
-	<script src="//neodraft.herokuapp.com/js/battledata.js?0.2400231743446566"></script>
-	<script src="//neodraft.herokuapp.com/data/pokedex-mini.js?0.6830474168857841"></script>
-	<script src="//neodraft.herokuapp.com/data/pokedex-mini-bw.js?0.6498976004984571"></script>
-	<script src="//neodraft.herokuapp.com/data/graphics.js?0.6983368072064129"></script>
-	<script src="//neodraft.herokuapp.com/data/pokedex.js?0.366321955514308"></script>
-	<script src="//neodraft.herokuapp.com/data/items.js?0.8040511770365"></script>
-	<script src="//neodraft.herokuapp.com/data/moves.js?0.33668431925198217"></script>
-	<script src="//neodraft.herokuapp.com/data/abilities.js?0.8667311994448186"></script>
-	<script src="//neodraft.herokuapp.com/data/teambuilder-tables.js?0.2553941955323984"></script>
-	<script src="//neodraft.herokuapp.com/js/battle-tooltips.js?0.9301062163879525"></script>
-	<script src="//neodraft.herokuapp.com/js/battle.js?0.4742620988174149"></script>
+	<script src="//neodraft.herokuapp.com/js/lib/jquery-cookie.js?0.3954329890417927"></script>
+	<script src="//neodraft.herokuapp.com/js/lib/html-sanitizer-minified.js?0.44518110730376104"></script>
+	<script src="//neodraft.herokuapp.com/js/battle-sound.js?0.7621239236741308"></script>
+	<script src="//neodraft.herokuapp.com/config/config.js?0.05772885501737357"></script>
+	<script src="//neodraft.herokuapp.com/js/battledata.js?0.8840792400564963"></script>
+	<script src="//neodraft.herokuapp.com/data/pokedex-mini.js?0.5482682440477729"></script>
+	<script src="//neodraft.herokuapp.com/data/pokedex-mini-bw.js?0.5756250607452404"></script>
+	<script src="//neodraft.herokuapp.com/data/graphics.js?0.6856948959445786"></script>
+	<script src="//neodraft.herokuapp.com/data/pokedex.js?0.9141967105048212"></script>
+	<script src="//neodraft.herokuapp.com/data/items.js?0.43819203491875913"></script>
+	<script src="//neodraft.herokuapp.com/data/moves.js?0.8011748004866375"></script>
+	<script src="//neodraft.herokuapp.com/data/abilities.js?0.7350040679411081"></script>
+	<script src="//neodraft.herokuapp.com/data/teambuilder-tables.js?0.7386443373525502"></script>
+	<script src="//neodraft.herokuapp.com/js/battle-tooltips.js?0.5708611696555013"></script>
+	<script src="//neodraft.herokuapp.com/js/battle.js?0.1548662225567985"></script>
 	<script src="/js/replay.js?51e024e3"></script>
 
 </body></html>
