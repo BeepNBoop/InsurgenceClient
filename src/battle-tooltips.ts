@@ -1028,7 +1028,7 @@ class BattleTooltips {
 		if (item === 'choiceband' && !clientPokemon?.volatiles['dynamax']) {
 			stats.atk = Math.floor(stats.atk * 1.5);
 		}
-		if (ability === 'purepower' || ability === 'hugepower') {
+		if (ability === 'purepower' || ability === 'hugepower' || ability === 'athenian') {
 			stats.atk *= 2;
 		}
 		if (ability === 'hustle' || (ability === 'gorillatactics' && !clientPokemon?.volatiles['dynamax'])) {
@@ -1041,10 +1041,19 @@ class BattleTooltips {
 			if (ability === 'sandrush' && weather === 'sandstorm') {
 				stats.spe *= 2;
 			}
-			if (ability === 'slushrush' && weather === 'hail') {
+			if (ability === 'slushrush' && (weather === 'hail' || weather === 'sleet')) {
+				stats.spe *= 2;
+			}
+			if (ability === 'shadowdance' && weather === 'newmoon') {
 				stats.spe *= 2;
 			}
 			if (item !== 'utilityumbrella') {
+				if (ability === 'absolution' && weather === 'newmoon') {
+					stats.spa *= 1.5;
+				}
+				if (ability === 'supercell' && (weather === 'newmoon' || weather === 'raindance' || weather === 'primordialsea')) {
+					stats.spa *= 1.5
+				}
 				if (weather === 'sunnyday' || weather === 'desolateland') {
 					if (ability === 'solarpower') {
 						stats.spa = Math.floor(stats.spa * 1.5);
@@ -1319,13 +1328,21 @@ class BattleTooltips {
 		];
 		const allowTypeOverride = !forMaxMove && !noTypeOverride.includes(move.id);
 
+		if (allowTypeOverride && move.name === 'Stealth Rock' && value.abilityModify(0, 'Foundry')) {
+			moveType = 'Fire';
+		}
+
 		if (allowTypeOverride && category !== 'Status' && !move.isZ) {
 			if (moveType === 'Normal') {
 				if (value.abilityModify(0, 'Aerilate')) moveType = 'Flying';
 				if (value.abilityModify(0, 'Galvanize')) moveType = 'Electric';
 				if (value.abilityModify(0, 'Pixilate')) moveType = 'Fairy';
 				if (value.abilityModify(0, 'Refrigerate')) moveType = 'Ice';
+				if (value.abilityModify(0, 'Intoxicate')) moveType = 'Poison';
 			}
+			if (moveType === 'Rock' && value.abilityModify(0, 'Foundry')) {
+				moveType = 'Fire';
+			} 
 			if (value.abilityModify(0, 'Normalize')) moveType = 'Normal';
 		}
 		// There aren't any max moves with the sound flag, but if there were, Liquid Voice would make them water type
