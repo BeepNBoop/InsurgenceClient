@@ -1149,7 +1149,7 @@
 			var species = Dex.getSpecies(set.species);
 			var isLetsGo = this.curTeam.format.includes('letsgo');
 			var isNatDex = this.curTeam.format.includes('nationaldex');
-			var isTorrenDex = this.curTeam.format.includes('insurgence120');
+			var isTorrenDex = this.curTeam.format.includes('insurgencedraft');
 			var buf = '<li value="' + i + '">';
 			if (!set.species) {
 				if (this.deletedSet) {
@@ -3117,7 +3117,7 @@
 			if (this.curTeam && this.curTeam.format) {
 				var baseFormat = this.curTeam.format;
 				var format = window.BattleFormats && window.BattleFormats[baseFormat];
-				if (this.curTeam.format.includes('insurgence120')) set.level = 120;
+				if (this.curTeam.format.includes('insurgencedraft')) set.level = 120;
 				if (baseFormat.substr(0, 3) === 'gen') baseFormat = baseFormat.substr(4);
 				if (baseFormat.substr(0, 8) === 'pokebank') baseFormat = baseFormat.substr(8);
 				if (this.curTeam && this.curTeam.format) {
@@ -3176,7 +3176,7 @@
 			var species = Dex.forGen(this.curTeam.gen).getSpecies(set.species);
 			if (!species.exists) return 0;
 
-			if (!set.level && this.curTeam.format.includes('insurgence120')) set.level = 120;
+			if (!set.level && this.curTeam.format.includes('insurgencedraft')) set.level = 120;
 			if (!set.level) set.level = 100;
 			if (typeof set.ivs[stat] === 'undefined') set.ivs[stat] = 31;
 
