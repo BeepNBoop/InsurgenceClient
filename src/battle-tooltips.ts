@@ -1028,8 +1028,10 @@ class BattleTooltips {
 		if (item === 'choiceband' && !clientPokemon?.volatiles['dynamax']) {
 			stats.atk = Math.floor(stats.atk * 1.5);
 		}
-		if (ability === 'purepower' || ability === 'hugepower' || ability === 'athenian') {
+		if (ability === 'purepower' || ability === 'hugepower') {
 			stats.atk *= 2;
+		}if (ability === 'athenian') {
+			stats.spa *= 2;
 		}
 		if (ability === 'hustle' || (ability === 'gorillatactics' && !clientPokemon?.volatiles['dynamax'])) {
 			stats.atk = Math.floor(stats.atk * 1.5);
