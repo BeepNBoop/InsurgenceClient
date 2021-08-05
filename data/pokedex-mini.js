@@ -1001,6 +1001,7 @@ exports.BattlePokemonSprites = {
 	reuniclus:{num:579},
 	reuniclusmega:{num:579},
 	reuniclusdelta:{num:579},
+	reuniclusdeltamega:{num:579},
 	ducklett:{num:580},
 	swanna:{num:581},
 	vanillite:{num:582},
