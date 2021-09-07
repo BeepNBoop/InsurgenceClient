@@ -684,8 +684,8 @@ const Dex = new class implements ModdedDex {
 		species.id !== 'amoongussdelta' && species.id !== 'ambipomdelta' && 
 		species.id !== 'amauradelta' && species.id !== 'aipomdelta' && 
 		species.id !== 'aggrondelta') || options.shiny)) {
-			spriteData.w *= 1;
-			spriteData.h *= 1;
+			spriteData.y += -16;
+		} else if (species.num <= 495 && !spriteData.isFrontSprite) {
 			spriteData.y += -16;
 		}
 
