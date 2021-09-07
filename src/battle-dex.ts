@@ -685,7 +685,38 @@ const Dex = new class implements ModdedDex {
 		species.id !== 'amauradelta' && species.id !== 'aipomdelta' && 
 		species.id !== 'aggrondelta') || options.shiny)) {
 			spriteData.y += -16;
-		} else if (species.num >= 495 && !spriteData.isFrontSprite) {
+		} else if (species.num >= 495 && !spriteData.isFrontSprite && 
+			((species.id !== 'weezingdelta' && species.id !== 'volcaronadeltaarmored' && 
+			species.id !== 'vespiquendelta' && species.id !== 'torterradelta' && 
+			species.id !== 'snorlaxdelta' && species.id !== 'shiftrydelta' && 
+			species.id !== 'serperiordelta' && species.id !== 'roseradedelta' && 
+			species.id !== 'registeeldelta' && species.id !== 'regirockdelta' && 
+			species.id !== 'regicedelta' && species.id !== 'pidgeotdelta' && 
+			species.id !== 'noiverndelta' && species.id !== 'mismagiusdelta' && 
+			species.id !== 'metangdeltaspider' && species.id !== 'meloettadelta' && 
+			species.id !== 'meloettadeltamagician' && species.id !== 'medichamdelta' && 
+			species.id !== 'magmortardelta' && species.id !== 'lilligantdelta' && 
+			species.id !== 'lieparddelta' && species.id !== 'karrablastdelta' && 
+			species.id !== 'huntaildelta' && species.id !== 'heatmordelta' && 
+			species.id !== 'greninjadelta' && species.id !== 'gorebyssdelta' && 
+			species.id !== 'goodradelta' && species.id !== 'golurkdelta' && 
+			species.id !== 'golemdelta' && species.id !== 'girafarigdeltamega' && 
+			species.id !== 'escavalierdelta' && species.id !== 'emolgadelta' && 
+			species.id !== 'emolgadeltaactive' && species.id !== 'dragonitedelta' && 
+			species.id !== 'dunsparcedelta' && species.id !== 'dugtriodelta' && 
+			species.id !== 'dittodelta' && species.id !== 'darmanitandelta' && 
+			species.id !== 'crustledeltacake' && species.id !== 'cofagrigusdelta' && 
+			species.id !== 'charizarddelta' && species.id !== 'charizarddeltamega' && 
+			species.id !== 'cameruptdelta' && species.id !== 'chandeluredelta' && 
+			species.id !== 'blazikendelta' && species.id !== 'blastoisedelta' && 
+			species.id !== 'bisharpdelta' && species.id !== 'bisharpdeltamega' && 
+			species.id !== 'bergmitedelta' && species.id !== 'beldumdeltaspider' && 
+			species.id !== 'beldumdeltaruin' && species.id !== 'axewdelta' && 
+			species.id !== 'avaluggdelta' && species.id !== 'aurorusdelta' && 
+			species.id !== 'arondelta' && species.id !== 'arcaninedelta' && 
+			species.id !== 'amoongussdelta' && species.id !== 'ambipomdelta' && 
+			species.id !== 'amauradelta' && species.id !== 'aipomdelta' && 
+			species.id !== 'aggrondelta'))) {
 			spriteData.y += -16;
 		}
 
