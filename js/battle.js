@@ -1409,9 +1409,15 @@ break;
 case'frz':
 this.scene.resultAnim(pokemon,'Frozen','frz');
 break;
+case'fro':
+this.scene.resultAnim(pokemon,'Frostbitten','fro');
+break;
 case'slp':
 this.scene.resultAnim(pokemon,'Asleep','slp');
 pokemon.statusData.sleepTurns++;
+break;
+case'drz':
+this.scene.resultAnim(pokemon,'Asleep','slp');
 break;
 case'truant':
 this.scene.resultAnim(pokemon,'Loafing around','neutral');
@@ -1833,11 +1839,21 @@ this.scene.resultAnim(_poke15,'Failed','neutral');
 this.scene.resultAnim(_poke15,'Already asleep','neutral');
 }
 break;
+case'drz':
+if(_fromeffect.id==='uproar'){
+this.scene.resultAnim(_poke15,'Failed','neutral');
+}else{
+this.scene.resultAnim(_poke15,'Already drowsy','neutral');
+}
+break;
 case'par':
 this.scene.resultAnim(_poke15,'Already paralyzed','neutral');
 break;
 case'frz':
 this.scene.resultAnim(_poke15,'Already frozen','neutral');
+break;
+case'fro':
+this.scene.resultAnim(_poke15,'Already frostbitten','neutral');
 break;
 case'unboost':
 this.scene.resultAnim(_poke15,'Stat drop blocked','neutral');
@@ -1941,6 +1957,12 @@ if(_effect8.id==='rest'){
 _poke20.statusData.sleepTurns=0;
 }
 break;
+case'drz':
+this.scene.resultAnim(_poke20,'Asleep','drz');
+if(_effect8.id==='rest'){
+_poke20.statusData.sleepTurns=0;
+}
+break;
 case'par':
 this.scene.resultAnim(_poke20,'Paralyzed','par');
 this.scene.runStatusAnim('par',[_poke20]);
@@ -1948,6 +1970,10 @@ break;
 case'frz':
 this.scene.resultAnim(_poke20,'Frozen','frz');
 this.scene.runStatusAnim('frz',[_poke20]);
+break;
+case'fro':
+this.scene.resultAnim(_poke20,'Frostbitten','fro');
+this.scene.runStatusAnim('fro',[_poke20]);
 break;
 default:
 this.scene.updateStatbar(_poke20);
@@ -1987,10 +2013,17 @@ case'slp':
 this.scene.resultAnim(_poke21,'Woke up','good');
 _poke21.statusData.sleepTurns=0;
 break;
+case'drz':
+this.scene.resultAnim(_poke21,'Woke up','good');
+_poke21.statusData.sleepTurns=0;
+break;
 case'par':
 this.scene.resultAnim(_poke21,'Paralysis cured','good');
 break;
 case'frz':
+this.scene.resultAnim(_poke21,'Thawed','good');
+break;
+case'fro':
 this.scene.resultAnim(_poke21,'Thawed','good');
 break;
 default:
@@ -2925,7 +2958,7 @@ output.hp=output.maxhp*parseFloat(hp)/100;
 
 if(!status){
 output.status='';
-}else if(status==='par'||status==='brn'||status==='slp'||status==='frz'||status==='tox'){
+}else if(status==='par'||status==='brn'||status==='slp'||status==='drz'||status==='frz'||status==='fro'||status==='tox'){
 output.status=status;
 }else if(status==='psn'&&output.status!=='tox'){
 output.status=status;

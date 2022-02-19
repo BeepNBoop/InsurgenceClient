@@ -466,6 +466,7 @@ class BattleTooltips {
 		Flying: "Supersonic Skystrike",
 		Ground: "Tectonic Rage",
 		Fairy: "Twinkle Tackle",
+		Omnitype: "",
 		"???": "",
 	};
 
@@ -488,6 +489,7 @@ class BattleTooltips {
 		Flying: "Max Airstream",
 		Ground: "Max Quake",
 		Fairy: "Max Starfall",
+		Omnitype: "",
 		"???": "",
 	};
 
@@ -1513,7 +1515,7 @@ class BattleTooltips {
 			}
 		}
 		if (move.id === 'wakeupslap' && target) {
-			if (target.status === 'slp') {
+			if (target.status === 'slp' || target.status === 'drz') {
 				value.modify(2, 'Wake-Up Slap + Sleep');
 			}
 		}

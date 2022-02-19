@@ -1409,9 +1409,15 @@ class Battle {
 		case 'frz':
 			this.scene.resultAnim(pokemon, 'Frozen', 'frz');
 			break;
+		case 'fro':
+			this.scene.resultAnim(pokemon, 'Frostbitten', 'fro');
+			break;
 		case 'slp':
 			this.scene.resultAnim(pokemon, 'Asleep', 'slp');
 			pokemon.statusData.sleepTurns++;
+			break;
+		case 'drz':
+			this.scene.resultAnim(pokemon, 'Asleep', 'slp');
 			break;
 		case 'truant':
 			this.scene.resultAnim(pokemon, 'Loafing around', 'neutral');
@@ -1833,11 +1839,21 @@ class Battle {
 					this.scene.resultAnim(poke, 'Already asleep', 'neutral');
 				}
 				break;
+			case 'drz':
+				if (fromeffect.id === 'uproar') {
+					this.scene.resultAnim(poke, 'Failed', 'neutral');
+				} else {
+					this.scene.resultAnim(poke, 'Already drowsy', 'neutral');
+				}
+				break;
 			case 'par':
 				this.scene.resultAnim(poke, 'Already paralyzed', 'neutral');
 				break;
 			case 'frz':
 				this.scene.resultAnim(poke, 'Already frozen', 'neutral');
+				break;
+			case 'fro':
+				this.scene.resultAnim(poke, 'Already frostbitten', 'neutral');
 				break;
 			case 'unboost':
 				this.scene.resultAnim(poke, 'Stat drop blocked', 'neutral');
@@ -1941,6 +1957,12 @@ class Battle {
 					poke.statusData.sleepTurns = 0; // for Gen 2 use through Sleep Talk
 				}
 				break;
+			case 'drz':
+				this.scene.resultAnim(poke, 'Asleep', 'drz');
+				if (effect.id === 'rest') {
+					poke.statusData.sleepTurns = 0; // for Gen 2 use through Sleep Talk
+				}
+				break;
 			case 'par':
 				this.scene.resultAnim(poke, 'Paralyzed', 'par');
 				this.scene.runStatusAnim('par' as ID, [poke]);
@@ -1948,6 +1970,10 @@ class Battle {
 			case 'frz':
 				this.scene.resultAnim(poke, 'Frozen', 'frz');
 				this.scene.runStatusAnim('frz' as ID, [poke]);
+				break;
+			case 'fro':
+				this.scene.resultAnim(poke, 'Frostbitten', 'fro');
+				this.scene.runStatusAnim('fro' as ID, [poke]);
 				break;
 			default:
 				this.scene.updateStatbar(poke);
@@ -1987,10 +2013,17 @@ class Battle {
 					this.scene.resultAnim(poke, 'Woke up', 'good');
 					poke.statusData.sleepTurns = 0;
 					break;
+				case 'drz':
+					this.scene.resultAnim(poke, 'Woke up', 'good');
+					poke.statusData.sleepTurns = 0;
+					break;
 				case 'par':
 					this.scene.resultAnim(poke, 'Paralysis cured', 'good');
 					break;
 				case 'frz':
+					this.scene.resultAnim(poke, 'Thawed', 'good');
+					break;
+				case 'fro':
 					this.scene.resultAnim(poke, 'Thawed', 'good');
 					break;
 				default:
@@ -2925,7 +2958,7 @@ class Battle {
 		// status parse
 		if (!status) {
 			output.status = '';
-		} else if (status === 'par' || status === 'brn' || status === 'slp' || status === 'frz' || status === 'tox') {
+		} else if (status === 'par' || status === 'brn' || status === 'slp' || status === 'drz' || status === 'frz' || status === 'fro' || status === 'tox') {
 			output.status = status;
 		} else if (status === 'psn' && output.status !== 'tox') {
 			output.status = status;

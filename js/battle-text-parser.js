@@ -995,7 +995,7 @@ return _line25+_template60.replace('[POKEMON]',this.pokemon(_pokemon31)).replace
 }
 
 _templateId9='fail';
-if(['brn','frz','par','psn','slp','substitute'].includes(_id17)){
+if(['brn','frz','par','psn','slp','fro','drz','substitute'].includes(_id17)){
 _templateId9='alreadyStarted';
 }
 if(kwArgs.heavy)_templateId9='failTooHeavy';

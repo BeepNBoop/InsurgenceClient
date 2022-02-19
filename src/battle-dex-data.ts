@@ -1225,8 +1225,8 @@ type NatureName = 'Adamant' | 'Bashful' | 'Bold' | 'Brave' | 'Calm' | 'Careful' 
 	'Quiet' | 'Quirky' | 'Rash' | 'Relaxed' | 'Sassy' | 'Serious' | 'Timid';
 type StatNameExceptHP = 'atk' | 'def' | 'spa' | 'spd' | 'spe';
 type TypeName = 'Normal' | 'Fighting' | 'Flying' | 'Poison' | 'Ground' | 'Rock' | 'Bug' | 'Ghost' | 'Steel' |
-	'Fire' | 'Water' | 'Grass' | 'Electric' | 'Psychic' | 'Ice' | 'Dragon' | 'Dark' | 'Fairy' | '???';
-type StatusName = 'par' | 'psn' | 'frz' | 'slp' | 'brn';
+	'Fire' | 'Water' | 'Grass' | 'Electric' | 'Psychic' | 'Ice' | 'Dragon' | 'Dark' | 'Fairy' | 'Omnitype' | '???';
+type StatusName = 'par' | 'psn' | 'frz' | 'slp' | 'brn' | 'drz' | 'fro';
 type BoostStatName = 'atk' | 'def' | 'spa' | 'spd' | 'spe' | 'evasion' | 'accuracy' | 'spc';
 type GenderName = 'M' | 'F' | 'N';
 
