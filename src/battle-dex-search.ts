@@ -543,7 +543,7 @@ abstract class BattleTypedSearch<T extends SearchType> {
 	 */
 	set: PokemonSet | null = null;
 
-	protected formatType: 'doubles' | 'letsgo' | 'metronome' | 'natdex' | 'nfe' | 'dlc1' | 'dlc1doubles' | null = null;
+	protected formatType: 'doubles' | 'letsgo' | 'metronome' | 'gen8inspla' | 'natdex' | 'nfe' | 'dlc1' | 'dlc1doubles' | null = null;
 
 	/**
 	 * Cached copy of what the results list would be with only base filters
@@ -850,6 +850,8 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 			table = table['gen' + dex.gen];
 		} else if (this.formatType === 'letsgo') {
 			table = table['letsgo'];
+		} else if (this.formatType === 'gen8inspla') {
+			table = table['gen8inspla'];
 		} else if (this.formatType === 'natdex') {
 			table = table['natdex'];
 		} else if (this.formatType === 'metronome') {
