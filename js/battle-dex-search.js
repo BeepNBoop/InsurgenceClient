@@ -850,6 +850,8 @@ isDoublesOrBS=true;
 table=table['gen'+dex.gen];
 }else if(this.formatType==='letsgo'){
 table=table['letsgo'];
+}else if(this.formatType==='gen8inspla'){
+table=table['gen8inspla'];
 }else if(this.formatType==='natdex'){
 table=table['natdex'];
 }else if(this.formatType==='metronome'){
